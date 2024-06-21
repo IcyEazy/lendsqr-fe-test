@@ -1,0 +1,122 @@
+@use "/src//mixin.scss" as mixin;
+
+.filters_container {
+  position: absolute;
+  top: 50px;
+  z-index: 100;
+  background-color: #ffffff;
+  border: 1px solid #545f7d24;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  width: 270px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+
+  @include mixin.mobile {
+    padding: 16px;
+    width: 90%;
+  }
+
+  @include mixin.tablet {
+    padding: 16px;
+  }
+
+  .box {
+    position: relative;
+
+    .org_dropdown_options {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: #545f7d;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      box-shadow: 3px 5px 20px 0px #0000000a;
+
+      p {
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        padding-left: 24px;
+      }
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #545f7d;
+    }
+
+    input {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: 100%;
+      font-size: 14px;
+      color: #545f7d;
+
+      &::placeholder {
+        color: #545f7d;
+      }
+    }
+
+    .dropdown_input,
+    .input {
+      position: relative;
+      margin-top: 8px;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid #213f7d;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .arrow_down {
+        transform: rotate(90deg);
+      }
+      .arrow_up {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  .btns {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+
+    button {
+      flex-basis: 50%;
+      height: 40px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+
+      @include mixin.mobile {
+        font-size: 12px;
+      }
+    }
+
+    .reset_btn {
+      background-color: #ffffff;
+      border: 1px solid #545f7d;
+      color: #545f7d;
+    }
+
+    .filter_btn {
+      background-color: #39cdcc;
+      border: 1px solid #39cdcc;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use "/src/mixin.scss" as mixin;
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+
+  @include mixin.mobile {
+    justify-content: center;
+  }
+
+  .customStyle {
+    transform: rotate(180deg);
+  }
+
+  .out_of {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    @include mixin.mobile {
+      display: none;
+    }
+
+    p {
+      font-size: 14px;
+      color: #545f7d;
+    }
+
+    .out_of_box {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 30px;
+      background-color: #213f7d1a;
+      border-radius: 4px;
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #213f7d;
+      }
+
+      .rotate {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .pagination_box {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .arrow_btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: none;
+      background-color: #213f7d1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .page_numbers {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+
+      span {
+        font-size: 16px;
+        color: #545f7d;
+        cursor: pointer;
+      }
+
+      .span_active {
+        font-weight: 500;
+      }
+    }
+  }
+}

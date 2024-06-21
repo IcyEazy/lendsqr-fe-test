@@ -1,0 +1,203 @@
+@use "/src/mixin.scss" as mixin;
+
+.sidebar {
+  background-color: #ffffff;
+  box-shadow: 0px 5px 20px 0px #0000000a;
+  padding: 16px 0;
+
+  p {
+    color: #213f7d;
+    font-size: 16px;
+
+    @include mixin.mobile {
+      font-size: 14px;
+    }
+
+    @include mixin.tablet {
+      font-size: 14px;
+    }
+  }
+
+  @include mixin.tablet {
+    padding: 16px 0;
+  }
+
+  .switch,
+  .dashboard {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 32px;
+
+    @include mixin.mobile {
+      margin-left: 16px;
+    }
+
+    @include mixin.tablet {
+      margin-left: 24px;
+    }
+
+    span {
+      transform: rotate(90deg);
+
+      @include mixin.mobile {
+        margin-right: 8px;
+      }
+
+      @include mixin.tablet {
+        margin-right: 8px;
+      }
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dashboard_items {
+    padding-top: 16px;
+
+    p {
+      color: #545f7d;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-left: 32px;
+      margin-bottom: 24px;
+
+      @include mixin.mobile {
+        margin-left: 16px;
+      }
+
+      @include mixin.tablet {
+        margin-left: 24px;
+      }
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+
+      .link {
+        color: #213f7d;
+        font-size: 16px;
+        text-decoration: none;
+
+        @include mixin.tablet {
+          font-size: 14px;
+        }
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 32px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: #39cdcc20;
+          border-left: 3px solid #39cdcc;
+        }
+
+        @include mixin.mobile {
+          padding: 5px 16px;
+        }
+
+        @include mixin.tablet {
+          padding: 5px 24px;
+        }
+      }
+      .item_active {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 32px;
+        background-color: #39cdcc20;
+        border-left: 3px solid #39cdcc;
+
+        @include mixin.mobile {
+          padding: 5px 16px;
+        }
+
+        @include mixin.tablet {
+          padding: 5px 24px;
+        }
+      }
+    }
+  }
+
+  .logout {
+    margin-top: 71px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 32px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #39cdcc20;
+        border-left: 3px solid #39cdcc;
+      }
+
+      @include mixin.mobile {
+        padding: 5px 16px;
+      }
+
+      @include mixin.tablet {
+        padding: 5px 24px;
+      }
+
+      .link {
+        color: #213f7d;
+        font-size: 16px;
+        text-decoration: none;
+
+        @include mixin.tablet {
+          font-size: 14px;
+        }
+      }
+    }
+    .item_active {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 32px;
+      background-color: #39cdcc20;
+      border-left: 3px solid #39cdcc;
+
+      @include mixin.mobile {
+        padding: 5px 16px;
+      }
+
+      @include mixin.tablet {
+        padding: 5px 24px;
+      }
+    }
+    p {
+      color: #545f7d;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-left: 32px;
+      margin-top: 32px;
+      margin-bottom: 24px;
+
+      @include mixin.mobile {
+        margin-left: 16px;
+      }
+
+      @include mixin.tablet {
+        margin-left: 24px;
+      }
+    }
+  }
+}

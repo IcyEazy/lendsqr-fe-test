@@ -1,0 +1,137 @@
+@use "/src/mixin.scss" as mixin;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 73px;
+  padding: 0 50px 0 32px;
+  height: 100px;
+  background-color: #ffffff;
+  box-shadow: 3px 0px 20px 0px #0000000a;
+
+  @include mixin.mobile {
+    padding: 0 16px;
+    justify-content: space-between;
+    gap: 16px;
+    height: 70px;
+  }
+  @include mixin.tablet {
+    padding: 0 24px;
+    gap: 40px;
+  }
+
+  .search_profile_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include mixin.mobile {
+      display: block;
+      width: auto;
+    }
+
+    .search_bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 1px solid #213f7d;
+      border-radius: 8px;
+      height: 40px;
+      width: 400px;
+
+      @include mixin.mobile {
+        display: none;
+      }
+      @include mixin.tablet {
+        width: 300px;
+      }
+
+      input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        color: #545f7d;
+        font-size: 14px;
+        padding-left: 16px;
+
+        &::placeholder {
+          color: #545f7d;
+        }
+      }
+      button {
+        border: none;
+        outline: none;
+        background-color: #39cdcc;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        width: 56px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      @include mixin.mobile {
+        gap: 16px;
+      }
+      @include mixin.tablet {
+        gap: 16px;
+      }
+
+      .docs {
+        color: #213f7d;
+        font-size: 16px;
+        text-decoration: underline;
+
+        @include mixin.mobile {
+          font-size: 14px;
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+
+          @include mixin.mobile {
+            width: 32px;
+            height: 32px;
+          }
+          @include mixin.tablet {
+            width: 40px;
+            height: 40px;
+          }
+        }
+        p {
+          color: #213f7d;
+          font-size: 16px;
+          font-weight: 500;
+
+          @include mixin.mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
