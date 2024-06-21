@@ -42,7 +42,7 @@ The purpose of this application is to provide a user-friendly platform for loan 
 1. Clone the repository: git clone <https://github.com/IcyEazy/lendsqr-fe-test.git>
 2. Navigate to the project directory: cd lendsqr-assessment
 3. Install the dependencies: npm install
-4. Just incase the mocky api endpoint <https://run.mocky.io/v3/cee76889-f53b-4d1d-8dc5-b130abb13c54> doesn't work. Run the command: npm run json-server db.json to initialize the database and change the axios.get endpoint to <http://localhost:3000/users>
+4. Just incase the mocky api endpoint <https://run.mocky.io/v3/cee76889-f53b-4d1d-8dc5-b130abb13c54> doesn't work. Run the command: "npm run json-server db.json" to initialize the database and change the axios.get endpoint to <http://localhost:3005/users>
 5. Start the development server: npm start
 6. Open your web browser and visit: <http://localhost:3000>
 
