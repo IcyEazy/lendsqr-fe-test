@@ -39,7 +39,7 @@ The purpose of this application is to provide a user-friendly platform for loan 
 
 > To install and set up Lendsqr web application on your local machine, follow these steps:
 
-1. Clone the repository: git clone <https://github.com/lendsqr/lendsqr-assessment.git>
+1. Clone the repository: git clone <https://github.com/IcyEazy/lendsqr-fe-test.git>
 2. Navigate to the project directory: cd lendsqr-assessment
 3. Install the dependencies: npm install
 4. npm run json-server db.json to initialize the database
@@ -93,7 +93,7 @@ Lendsqr web application provides **comprehensive information** of a specific use
 3. On the user's details page, you can find information such as name, email, phone number, and address, profile picture, social links, guarantors information, and more.
 4. Scroll down to know more about the user's profile.
 
-**Link to view in development** - <http://localhost:3000/user-details/'user._id'>
+**Link to view in development** - <http://localhost:3000/user-details/user._id>
 
 ## Testing
 
