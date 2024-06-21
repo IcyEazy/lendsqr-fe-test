@@ -8,7 +8,7 @@ Welcome to the documentation for the Lendsqr web application. This documentation
 2. Technologies Used
 3. Installation
 4. Usage
-   - Navabr
+   - Navbar
    - Sidebar
    - Login Page
    - Dashboard
